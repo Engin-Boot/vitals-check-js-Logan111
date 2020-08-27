@@ -1,0 +1,22 @@
+{
+  "name": "vitals-check",
+  "version": "1.0.0",
+  "description": "This program detects when any of the body vitals go out of limits.\r The purpose is to treat without delay.",
+  "main": "checker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bootjscr/vitals-check.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bootjscr/vitals-check/issues"
+  },
+  "homepage": "https://github.com/bootjscr/vitals-check#readme",
+  "dependencies": {
+    "chai": "^4.2.0"
+  }
+}
