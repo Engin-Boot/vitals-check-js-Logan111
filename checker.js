@@ -23,14 +23,19 @@ function isVital_LimitsOk(val , low, high){
    return (val >= low && val <= high)
 }
 
+expect(isVital_LimitsOk(66, 75, 100)).to.be.false;
+expect(isVital_LimitsOk(123, 55, 95)).to.be.false;
+expect(isVital_LimitsOk(80, 70, 120)).to.be.true;
+
 expect(vitalsAreOk(60, 80, 50)).to.be.false; //bp value less than lowerlimit
 expect(vitalsAreOk(160, 95, 70)).to.be.false; //bp value more than upperlimit
-expect(vitalsAreOk(80, 95, 60)).to.be.true;
+
 expect(vitalsAreOk(100, 20, 70)).to.be.false; //spo2 value less than lower limit
 expect(vitalsAreOk(80, 120, 70)).to.be.false; // spo2 value more than upperlimit
+
 expect(vitalsAreOk(115, 95, 25)).to.be.false; //Resprate value less than lowerlimit
 expect(vitalsAreOk(85, 95, 98)).to.be.false;// Resprate value more than upperlimit
-expect(vitalsAreOk(123, 95, 70)).to.be.true;
+
 expect(vitalsAreOk(180, 120, 116)).to.be.false; // all vitals are above upper limit
 expect(vitalsAreOk(60, 25, 29)).to.be.false;  //all vitals are below lower limit
 //console.log(vitalsAreOk(60, 80, 50));
