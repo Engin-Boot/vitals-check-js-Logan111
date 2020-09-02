@@ -38,12 +38,7 @@ class AlertbySMS extends Alert{
 function vitalsAreOk(bpm, spo2, respRate)
 {
     
-    if(isBpOk(bpm) && isSpo2Ok(spo2) && isRespRateOk(respRate))
-    {
-        console.log("All vitals are in limit");
-        return true;
-    }
-    return false;
+    return( isBpOk(bpm) && isSpo2Ok(spo2) && isRespRateOk(respRate) ); 
 
 }
 
@@ -111,7 +106,6 @@ alertobj =  new AlertbySMS();
 expect(vitalsAreOk(180, 120, 116)).to.be.false; // all vitals are above upper limit
 expect(vitalsAreOk(60, 25, 29)).to.be.false;  //all vitals are below lower limit
 
-expect(vitalsAreOk(80, 70, 70)).to.be.true; 
 //console.log(vitalsAreOk(60, 80, 50));
 
 console.log('checker is done');
