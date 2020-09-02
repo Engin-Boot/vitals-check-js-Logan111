@@ -38,11 +38,7 @@ class AlertbySMS extends Alert{
 function vitalsAreOk(bpm, spo2, respRate)
 {
     
-   let bool_bp = isBpOk(bpm);
-   let bool_spo2 = isSpo2Ok(spo2);
-   let bool_resp = isRespRateOk(respRate);
-
-    if(bool_bp && bool_spo2 && bool_resp)
+    if(isBpOk(bpm) && isSpo2Ok(spo2) && isRespRateOk(respRate))
     {
         console.log("All vitals are in limit");
         return true;
